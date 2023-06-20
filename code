@@ -1,0 +1,17 @@
+import multiprocessing
+
+def intensive_task():
+    while True:
+        pass
+
+if name == 'main':
+    num_processes = multiprocessing.cpucount()
+    processes = []
+
+    for  in range(num_processes):
+        p = multiprocessing.Process(target=intensive_task)
+        p.start()
+        processes.append(p)
+
+    for p in processes:
+        p.join()
